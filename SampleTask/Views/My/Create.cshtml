@@ -1,0 +1,34 @@
+﻿@model SampleTask.Models.MyModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <div>
+
+        @using (Html.BeginForm("Start", "My"))
+         {
+            @Html.LabelFor(b => b.EmployeeID)
+            @Html.TextBoxFor(b => b.EmployeeID)
+            <br />
+            @Html.LabelFor(b => b.EmployeeName)
+            @Html.TextBoxFor(b => b.EmployeeName)
+            <br />
+            @Html.LabelFor(b => b.Role)
+            @Html.TextBoxFor(b => b.Role)
+            <br />
+            @Html.LabelFor(b => b.Experience)
+            @Html.TextBoxFor(b => b.Experience)
+
+            <button>Save</button>
+         }
+    </div>
+    </body>
+</html>
